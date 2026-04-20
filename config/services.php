@@ -35,4 +35,18 @@ return [
         ],
     ],
 
+    // Serviços externos do motor financeiro.
+    'exchange_rate' => [
+        'url' => env('EXCHANGE_RATE_URL', 'https://api.exchangerate.host/latest'),
+        'connect_timeout' => env('EXCHANGE_RATE_CONNECT_TIMEOUT', 5),
+        'timeout' => env('EXCHANGE_RATE_TIMEOUT', 10),
+    ],
+
+    'market_data' => [
+        'url' => env('MARKET_DATA_URL', 'https://pro-api.coinmarketcap.com/v2/cryptocurrency/quotes/latest'),
+        'api_key' => env('COIN_MARKETCAP_API_KEY'),
+        'connect_timeout' => env('MARKET_DATA_CONNECT_TIMEOUT', 5),
+        'timeout' => env('MARKET_DATA_TIMEOUT', 10),
+    ],
+
 ];
